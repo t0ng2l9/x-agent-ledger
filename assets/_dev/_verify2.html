@@ -1,0 +1,45 @@
+<!doctype html><meta charset="utf-8"><body><pre id="o"></pre><script>
+const out=[];
+const load=(s)=>new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=s;});
+(async()=>{
+ const img=await load("banner.png?v=3");
+ const c=document.createElement("canvas");c.width=img.width;c.height=img.height;
+ const x=c.getContext("2d");x.drawImage(img,0,0);
+ const W=img.width,H=img.height;
+ const d=x.getImageData(0,0,W,H).data;
+ const at=(px,py)=>{const i=(py*W+px)*4;return [d[i],d[i+1],d[i+2]];};
+ const isInk=(r,g,b)=>!(r<20&&g<24&&b<28);
+
+ // 1. avatar overlap zone: bottom-left, avatar bottom edge on banner bottom edge
+ //    X renders ~200px avatar over the left edge; check nothing but background there
+ let inkInAvatar=0;
+ for(let py=H-210;py<H;py++) for(let px=0;px<230;px++) if(isInk(...at(px,py))) inkInAvatar++;
+ out.push(`avatar-overlap zone (0..230 x, bottom 210px) ink pixels: ${inkInAvatar}`);
+
+ // 2. content bounding box
+ let minX=W,maxX=0,minY=H,maxY=0;
+ for(let py=0;py<H;py++)for(let px=0;px<W;px++){
+   if(isInk(...at(px,py))){ if(px<minX)minX=px; if(px>maxX)maxX=px; if(py<minY)minY=py; if(py>maxY)maxY=py; }
+ }
+ out.push(`content bbox: x ${minX}..${maxX}, y ${minY}..${maxY}`);
+
+ // 3. horizontal margins
+ out.push(`margins: left ${minX}px, right ${W-1-maxX}px, top ${minY}px, bottom ${H-1-maxY}px`);
+
+ // 4. count green accent pixels
+ let green=0; for(let i=0;i<d.length;i+=4){const r=d[i],g=d[i+1],b=d[i+2]; if(g>150&&r<130&&b<160)green++;}
+ out.push(`accent pixels: ${green} (${(100*green/(W*H)).toFixed(2)}%)`);
+
+ // 5. avatar legibility at small size: downsample to 32 and 48, count distinct ink columns
+ const a=await load("avatar.png");
+ const sc=document.createElement("canvas");sc.width=32;sc.height=32;
+ const sx=sc.getContext("2d");sx.imageSmoothingQuality="high";
+ sx.drawImage(a,0,0,32,32);
+ const ad=sx.getImageData(0,0,32,32).data;
+ let g32=0; for(let i=0;i<ad.length;i+=4){const r=ad[i],g=ad[i+1],b=ad[i+2]; if(g>140&&r<150&&b<170)g32++;}
+ out.push(`avatar at 32x32: accent pixels ${g32} / 1024 (${(100*g32/1024).toFixed(1)}%) — legible if >4%`);
+
+ document.getElementById("o").textContent=out.join("\n");
+})();
+</script></body>
+

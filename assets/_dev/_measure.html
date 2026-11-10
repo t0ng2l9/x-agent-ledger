@@ -1,0 +1,18 @@
+<!doctype html><meta charset="utf-8"><body><pre id="o"></pre><script>
+const out=[];
+const load=(s)=>new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=s;});
+const cv=document.createElement("canvas");const ctx=cv.getContext("2d");
+function w(font,text,ls=0){ctx.font=font;return Math.round(ctx.measureText(text).width+ls*Math.max(0,[...text].length-1));}
+out.push("LEFT column right edges (must stay < 960):");
+out.push("  17.9B 700 150px: right edge " + (120+w('700 150px "Segoe UI",Arial','17.9B')));
+out.push("  1.3B  700 150px: right edge " + (120+w('700 150px "Segoe UI",Arial','1.3B')));
+const t1='pushes in 12 months — more than 2024 and 2025 combined';
+const t2='merged pull requests — 3.5M a day on average';
+out.push("  tagline1 30px: width " + w('30px "Segoe UI",Arial',t1) + " -> right edge " + (124+w('30px "Segoe UI",Arial',t1)));
+out.push("  tagline2 30px: width " + w('30px "Segoe UI",Arial',t2) + " -> right edge " + (124+w('30px "Segoe UI",Arial',t2)));
+out.push("RIGHT column (must end < 1480):");
+out.push("  40% 700 210px: width " + w('700 210px "Segoe UI",Arial','40%') + " -> right edge " + (980+w('700 210px "Segoe UI",Arial','40%')));
+out.push("  'of pull requests' 30px -> right edge " + (984+w('30px "Segoe UI",Arial','of pull requests')));
+out.push("SINCE SEPTEMBER 26px ls5: width " + w('26px "Segoe UI",Arial','SINCE SEPTEMBER',5) + " -> " + (980+w('26px "Segoe UI",Arial','SINCE SEPTEMBER',5)));
+document.getElementById("o").textContent=out.join("\n");
+</script></body>

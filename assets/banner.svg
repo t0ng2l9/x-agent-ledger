@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="500" viewBox="0 0 1500 500">
+  <rect width="1500" height="500" fill="#0B0D10"/>
+  <g fill="#4ADE80">
+    <rect x="352" y="150" width="15" height="38" rx="3"/>
+    <rect x="379" y="132" width="15" height="74" rx="3"/>
+    <rect x="406" y="114" width="15" height="110" rx="3"/>
+    <path d="M437 114 L437 224 L492 169 Z"/>
+  </g>
+  <text x="352" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="52"
+        font-weight="700" letter-spacing="8" fill="#F2F4F7">AGENT LEDGER</text>
+  <line x1="352" y1="316" x2="1250" y2="316" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1"/>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="25" fill="#8A94A6" letter-spacing="0.3">
+    <text x="352" y="358">Tools, agents, workflows &amp; the business of AI.</text>
+    <text x="352" y="394">Researching what works. Testing what matters.</text>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="end">
+    <text x="1250" y="358" font-size="19" letter-spacing="3.2" fill="#4ADE80">EN / 中文</text>
+    <text x="1250" y="394" font-size="16" letter-spacing="2.4" fill="#5C6577">EST. 2026</text>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "_comment": "Feed list for the Agent Dispatch research radar. Edit freely: add/remove urls, tweak weight (1.0 = neutral) and tag.",
+  "feeds": [
+    { "name": "OpenAI",            "url": "https://openai.com/blog/rss.xml",                                          "tag": "vendor",  "weight": 1.2 },
+    { "name": "Google AI",         "url": "https://blog.google/technology/ai/rss/",                                    "tag": "vendor",  "weight": 1.1 },
+    { "name": "Hugging Face",      "url": "https://huggingface.co/blog/feed.xml",                                      "tag": "oss",     "weight": 1.0 },
+    { "name": "Ars Technica AI",   "url": "https://arstechnica.com/ai/feed/",                                          "tag": "media",   "weight": 1.0 },
+    { "name": "The Verge AI",      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",          "tag": "media",   "weight": 1.0 },
+    { "name": "Simon Willison",    "url": "https://simonwillison.net/atom/everything/",                                 "tag": "practitioner", "weight": 1.2 },
+    { "name": "Cloudflare Blog",   "url": "https://blog.cloudflare.com/rss/",                                          "tag": "infra",   "weight": 0.8 },
+    { "name": "GitHub Blog",       "url": "https://github.blog/feed/",                                                 "tag": "devtools","weight": 1.0 },
+    { "name": "Product Hunt",      "url": "https://www.producthunt.com/feed",                                          "tag": "launch",  "weight": 0.9 },
+    { "name": "r/LocalLLaMA",      "url": "https://www.reddit.com/r/LocalLLaMA/.rss",                                   "tag": "community","weight": 1.0 },
+    { "name": "Ars Technology Lab","url": "https://feeds.arstechnica.com/arstechnica/technology-lab",                   "tag": "media",   "weight": 0.7 }
+  ],
+  "blocked": [
+    { "name": "TechCrunch AI",  "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "reason": "blocks datacenter IPs / intermittent fetch failure" },
+    { "name": "VentureBeat AI", "url": "https://venturebeat.com/category/ai/feed/",                     "reason": "HTTP 429 rate limit" },
+    { "name": "Hacker News",    "url": "https://news.ycombinator.com/rss",                              "reason": "HTTP 419 anti-bot; use the web UI or Grok instead" }
+  ]
+}

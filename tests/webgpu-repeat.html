@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><title>repeat</title></head>
+<body style="background:#0B0D10;color:#F2F4F7;font:14px/1.5 Consolas,monospace;padding:32px"><pre id="o"></pre>
+<script type="module">
+const o = document.getElementById('o'); const L = [];
+const log = (s) => { L.push(s); o.textContent = L.join("\n"); };
+const mod = await import("https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.2");
+mod.env.allowLocalModels = false;
+const pipe = await mod.pipeline("text-generation", "onnx-community/Qwen2.5-0.5B-Instruct", { device: "webgpu", dtype: "q4" });
+const tok = pipe.tokenizer;
+const text = tok.apply_chat_template([{ role: "user", content: "What is 2+2?" }], { tokenize: false, add_generation_prompt: true });
+log("same prompt, greedy, 3 consecutive calls in one page session");
+log("");
+for (let i = 1; i <= 3; i++) {
+  const s = performance.now();
+  const out = await pipe(text, { max_new_tokens: 30, do_sample: false, return_full_text: false });
+  const secs = ((performance.now() - s) / 1000).toFixed(2);
+  const gen = String(out[0].generated_text ?? "");
+  const ids = tok.encode(gen);
+  log("call " + i + "  " + secs + "s  " + ids.length + " tok");
+  log("  > " + gen.replace(/\s+/g, " ").slice(0, 130));
+  log("");
+}
+log("DONE");
+</script></body></html>

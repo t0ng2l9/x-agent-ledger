@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8"><body><pre id="o"></pre><script>
+const out=[];
+function load(src){return new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=src;});}
+(async()=>{
+ for (const f of ["avatar.png","banner.png"]){
+  const img=await load(f);
+  const c=document.createElement("canvas");c.width=img.width;c.height=img.height;
+  const x=c.getContext("2d");x.drawImage(img,0,0);
+  const d=x.getImageData(0,0,c.width,c.height).data;
+  let bg=0,green=0,light=0,muted=0;
+  for(let i=0;i<d.length;i+=4){
+   const r=d[i],g=d[i+1],b=d[i+2],a=d[i+3];
+   if(a<10)continue;
+   if(r<20&&g<24&&b<28)bg++;
+   if(g>150&&r<130&&b<160)green++;
+   if(r>225&&g>225&&b>225)light++;
+   if(r>110&&r<170&&g>120&&g<175&&b>140&&b<190)muted++;
+  }
+  const n=d.length/4;
+  out.push(`${f}: ${img.width}x${img.height} px=${n} bg=${(100*bg/n).toFixed(1)}% green=${(100*green/n).toFixed(2)}% light=${(100*light/n).toFixed(2)}% muted=${(100*muted/n).toFixed(2)}%`);
+ }
+ // text width check for the banner wordmark
+ const cv=document.createElement("canvas");const ctx=cv.getContext("2d");
+ ctx.font='700 46px "Segoe UI", Arial, sans-serif';
+ const w=ctx.measureText("AGENT LEDGER").width + 7*13; // letter-spacing 7px
+ out.push(`wordmark width ~${Math.round(w)}px (starts x=120, banner 1500 -> margin ${1500-120-Math.round(w)}px)`);
+ ctx.font='27px "Segoe UI", Arial, sans-serif';
+ for(const s of ["Tools, agents, workflows & the business of AI.","Researching what works. Testing what matters."]){
+   out.push(`tagline "${s.slice(0,20)}..." ~${Math.round(ctx.measureText(s).width)}px`);
+ }
+ document.getElementById("o").textContent=out.join("\n");
+})();
+</script></body>

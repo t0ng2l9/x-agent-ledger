@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#0B0D10"/>
+  <!-- ledger mark: three recorded entries + closing chevron -->
+  <g fill="#4ADE80">
+    <rect x="96"  y="168" width="136" height="28" rx="4"/>
+    <rect x="96"  y="210" width="178" height="28" rx="4"/>
+    <rect x="96"  y="252" width="136" height="28" rx="4"/>
+    <path d="M260 168 L300 224 L260 280 L238 258 L272 224 L238 190 Z"/>
+  </g>
+</svg>

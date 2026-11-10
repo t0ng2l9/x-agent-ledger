@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><body><pre id="o"></pre><script>
+const load=(s)=>new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=s;});
+(async()=>{
+ const img=await load("card-octoverse.png?v=2");
+ const c=document.createElement("canvas");c.width=img.width;c.height=img.height;
+ const x=c.getContext("2d");x.drawImage(img,0,0);
+ const W=img.width,H=img.height,d=x.getImageData(0,0,W,H).data;
+ const ink=(px,py)=>{const i=(py*W+px)*4;return !(d[i]<20&&d[i+1]<24&&d[i+2]<28);};
+ // gutter between columns: x 940..975 should be empty below the header row
+ let g=0; for(let py=200;py<660;py++) for(let px=940;px<978;px++) if(ink(px,py)) g++;
+ // margins
+ let minX=W,maxX=0,minY=H,maxY=0;
+ for(let py=0;py<H;py++)for(let px=0;px<W;px++) if(ink(px,py)){if(px<minX)minX=px;if(px>maxX)maxX=px;if(py<minY)minY=py;if(py>maxY)maxY=py;}
+ document.getElementById("o").textContent =
+  `gutter ink (x940-978,y200-660): ${g}\nbbox: x ${minX}..${maxX}, y ${minY}..${maxY}\nmargins L${minX} R${W-1-maxX} T${minY} B${H-1-maxY}`;
+})();
+</script></body>

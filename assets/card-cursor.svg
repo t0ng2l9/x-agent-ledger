@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#0B0D10"/>
+  <rect x="120" y="112" width="72" height="6" fill="#4ADE80"/>
+  <text x="120" y="180" font-family="Segoe UI, Arial, sans-serif" font-size="24"
+        letter-spacing="6" fill="#8A94A6">CURSOR EXTENSION · 2026-10-30</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#F2F4F7">
+    <text x="120" y="370" font-size="130">2.1.313</text>
+    <text x="120" y="560" font-size="130">2.1.314</text>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#8A94A6">
+    <text x="124" y="420">posted to Anthropic's verified account</text>
+    <text x="124" y="610">shipped hours later</text>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="980" y="330" font-size="26" letter-spacing="5" fill="#8A94A6">EXPOSURE</text>
+    <text x="980" y="500" font-size="200" font-weight="700" fill="#4ADE80">12h</text>
+    <text x="984" y="556" font-size="30" fill="#8A94A6">at most 5,000 machines</text>
+    <text x="984" y="596" font-size="30" fill="#8A94A6">cloud credentials in scope</text>
+  </g>
+
+  <line x1="120" y1="720" x2="1480" y2="720" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  <text x="120" y="782" font-family="Segoe UI, Arial, sans-serif" font-size="26"
+        letter-spacing="4" fill="#F2F4F7">AGENT LEDGER</text>
+  <text x="1480" y="782" text-anchor="end" font-family="Segoe UI, Arial, sans-serif"
+        font-size="20" letter-spacing="2" fill="#5C6577">arstechnica.com · 2026-10-30</text>
+</svg>

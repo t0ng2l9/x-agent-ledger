@@ -1,0 +1,4 @@
+{
+  "timezone": "Europe/London",
+  "_comment": "Timezone the slot times in board.csv refer to. This machine runs on China Standard Time; the account targets a UK audience. Change to Europe/London / America/New_York etc. Override per run with --tz <IANA>."
+}

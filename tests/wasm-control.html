@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><title>wasm control</title></head>
+<body style="background:#0B0D10;color:#F2F4F7;font:14px/1.5 Consolas,monospace;padding:32px"><pre id="o"></pre>
+<script type="module">
+const o = document.getElementById('o'); const L = [];
+const log = (s) => { L.push(s); o.textContent = L.join("\n"); };
+const mod = await import("https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.2");
+mod.env.allowLocalModels = false;
+const MID = "onnx-community/Qwen2.5-0.5B-Instruct";
+
+const t0 = performance.now();
+const pipe = await mod.pipeline("text-generation", MID, { device: "wasm", dtype: "q4" });
+log("device=wasm  dtype=q4  load=" + ((performance.now() - t0) / 1000).toFixed(1) + "s");
+const tok = pipe.tokenizer;
+const text = tok.apply_chat_template([{ role: "user", content: "What is 2+2?" }], { tokenize: false, add_generation_prompt: true });
+log("prompt=" + tok.encode(text).length + " tok  greedy  max_new_tokens=30");
+log("");
+const seqs = [];
+for (let i = 1; i <= 5; i++) {
+  const s = performance.now();
+  const out = await pipe(text, { max_new_tokens: 30, do_sample: false, return_full_text: false });
+  const secs = ((performance.now() - s) / 1000).toFixed(2);
+  const gen = String(out[0].generated_text ?? "");
+  const ids = tok.encode(gen);
+  seqs.push(ids.join(","));
+  log("run " + i + "  " + secs + "s  " + ids.length + " tok  ids=" + ids.slice(0, 10).join(","));
+  log("     > " + gen.replace(/\s+/g, " ").slice(0, 120));
+}
+log("");
+log("distinct token sequences: " + new Set(seqs).size + " / 5");
+log("DONE");
+</script></body></html>

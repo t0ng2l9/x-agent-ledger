@@ -1,0 +1,98 @@
+date,day,phase,slot,type,deliverable,topic,asset,est_min,status,impressions,likes,profile_clicks,link_clicks,notes
+2026-11-02,1,P1 build,block,Brand,注册 X 主账号并完成资料设置,Agent Ledger,assets/avatar.png; assets/banner.png,90,done,,,,,用户于 2026-11-02 确认完成
+2026-11-02,1,P1 build,block,Research,整理 30 个参考账号与理由,8 lab / 8 indie / 8 reviewer / 6 agent,reference-accounts.md,60,done,,,,,
+2026-11-03,2,P1 build,block,Research,20 个备选选题入库（用 radar 跑 3 天）,选题库,,60,todo,,,,,digests/radar-*.md 累积
+2026-11-04,3,P1 build,block,Brand,视觉规范定稿（见 launch-checklist.md）,视觉系统,visual-spec.md,45,todo,,,,,
+2026-11-05,4,P2 test,am,EN post,English short post,Gemini 4 Carbon — 发布但不可用,,15,todo,,,,,draft: posts-01-10.md #1
+2026-11-05,4,P2 test,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,Gemini 4 Carbon — 发布但不可用,,15,todo,,,,,draft: posts-01-10.md #1（中文段）
+2026-11-05,4,P2 test,pm2,Visual,信息图 / 数据卡片,post 2 时间线卡,,40,todo,,,,,已完成：assets/card-cursor.png，gutter 0px / 边距 120
+2026-11-06,5,P2 test,am,EN post,English short post,Octoverse：40% 的 PR 由 agent 起草,assets/card-octoverse.png,15,todo,,,,,draft: posts-01-10.md #3
+2026-11-06,5,P2 test,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,Octoverse：40% 的 PR 由 agent 起草,,15,todo,,,,,draft: posts-01-10.md #3（中文段）
+2026-11-06,5,P2 test,pm2,Thread,英文深度 Thread（6–10 条）,"The 40% number, read properly（Octoverse 深读）",,60,todo,,,,,draft: thread-01-octoverse.md
+2026-11-07,6,P2 test,am,EN post,English short post,Claude 插件在 Cursor 被投毒,assets/card-cursor.png,15,todo,,,,,draft: posts-01-10.md #2
+2026-11-07,6,P2 test,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,Claude 插件在 Cursor 被投毒,,15,todo,,,,,draft: posts-01-10.md #2（中文段）
+2026-11-07,6,P2 test,pm2,Tool test,实际工具测试 + 截图/数据,WebGPU 复现：同一 prompt 连跑 3 次（已完成）,,45,todo,,,,,见 tool-test-01-webgpu.md；tests/webgpu-repeat.html 可重跑
+2026-11-07,6,P2 test,pm3,CN thread,中文 Thread（重写，不是翻译）,Octoverse 深读（中文版，6 条）,,40,todo,,,,,draft: thread-01-octoverse.md
+2026-11-08,7,P2 test,am,EN post,English short post,Vibe coding 做游戏跨线,,15,todo,,,,,draft: posts-01-10.md #4
+2026-11-08,7,P2 test,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,Vibe coding 做游戏跨线,,15,todo,,,,,draft: posts-01-10.md #4（中文段）
+2026-11-08,7,P2 test,pm2,Visual,信息图 / 数据卡片,Battle Drones 截图（裁掉浏览器边框）,,40,todo,,,,,post 4 用；必须自己截，不用别人的图
+2026-11-08,7,P2 test,eve,Review,周复盘：跑 05-analyst-weekly,本周数据,,30,todo,,,,,
+2026-11-09,8,P3 system,am,EN post,English short post,GPT-6.1 Terra：中间档才是落地档,,15,posted,,,,,https://x.com/agentledger_/status/2119716983675777224; additional fresh post: https://x.com/agentledger_/status/2119718503938928955 (posts-extra-2026-11-09.md); Chinese follow-up: https://x.com/agentledger_/status/2119718963685040274
+2026-11-09,8,P3 system,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,GPT-6.1 Terra：中间档才是落地档,,15,posted,,,,,https://x.com/agentledger_/status/2119717114856771685
+2026-11-09,8,P3 system,block,System,Grok 研究工作流固定下来（01-researcher 每天跑）,研究工作流,,45,todo,,,,,
+2026-11-10,9,P3 system,am,EN post,English short post,OpenAI Control Room：研究任务 35 秒停止窗口,,15,todo,,,,,draft: posts-extra-2026-11-10.md；source: OpenAI 2026-11-09；按 Europe/London 10:00 发布前复核
+2026-11-10,9,P3 system,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,OpenAI Control Room：研究任务 35 秒停止窗口,,15,deferred,,,,,EN 先发；中文暂缓，避免同一链接/主题当天重复；后续时段复核新鲜度
+2026-11-10,9,P3 system,pm,Thread,英文深度 Thread（6–10 条）,Spawn：每小时上线、token 比工资贵,,60,todo,,,,,draft: thread-02-spawn.md；伦敦 14:00（上海 22:00）；opening cites Sansbury via Simon Willison, 2026-10-29
+2026-11-10,9,P3 system,block,System,board.csv 数据回填习惯建立,数据回填,,20,todo,,,,,Recheck Nov 9 posts at ~17:30 Asia/Shanghai (~09:30 Europe/London), then record ~24h metrics
+2026-11-11,10,P3 system,am,EN post,English short post,Mistral Large 4 与「开源」的新含义,,15,todo,,,,,draft: posts-01-10.md #7
+2026-11-11,10,P3 system,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,Mistral Large 4 与「开源」的新含义,,15,todo,,,,,draft: posts-01-10.md #7（中文段）
+2026-11-11,10,P3 system,pm2,Tool test,实际工具测试 + 截图/数据,待定（当日选题未定）,,45,todo,,,,,未定主题；需可复现的测试对象
+2026-11-11,10,P3 system,pm3,CN thread,中文 Thread（重写，不是翻译）,Spawn（中文版，6 条）,,40,todo,,,,,draft: thread-02-spawn.md
+2026-11-12,11,P3 system,am,EN post,English short post,Apple Intelligence 进中国（部分功能）,,15,todo,,,,,draft: posts-01-10.md #8
+2026-11-12,11,P3 system,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,Apple Intelligence 进中国（部分功能）,,15,todo,,,,,draft: posts-01-10.md #8（中文段）
+2026-11-12,11,P3 system,pm2,Visual,信息图 / 数据卡片,待定（当日选题未定）,,40,todo,,,,,等当日 EN 帖定稿后再定
+2026-11-13,12,P3 system,am,EN post,English short post,轨道上的 TPU,,15,todo,,,,,draft: posts-01-10.md #9
+2026-11-13,12,P3 system,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,轨道上的 TPU,,15,todo,,,,,draft: posts-01-10.md #9（中文段）
+2026-11-13,12,P3 system,pm2,Thread,英文深度 Thread（6–10 条）,待定（当日选题未定）,,60,todo,,,,,未写
+2026-11-14,13,P3 system,am,EN post,English short post,不起眼的那条：datasette-llm 0.1a9,,15,todo,,,,,draft: posts-01-10.md #10
+2026-11-14,13,P3 system,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,不起眼的那条：datasette-llm 0.1a9,,15,todo,,,,,draft: posts-01-10.md #10（中文段）
+2026-11-14,13,P3 system,pm2,Tool test,实际工具测试 + 截图/数据,待定（当日选题未定）,,45,todo,,,,,未定主题；需可复现的测试对象
+2026-11-15,14,P3 system,am,EN post,English short post,4B 模型直接产出 3D 资产（GLB-3D-Coder）,,15,todo,,,,,draft: posts-11-13.md #11
+2026-11-15,14,P3 system,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,4B 模型直接产出 3D 资产（GLB-3D-Coder）,,15,todo,,,,,draft: posts-11-13.md #11（中文段）
+2026-11-15,14,P3 system,pm2,Visual,信息图 / 数据卡片,GLB-3D-Coder 卡片：4B → GLB → Godot,,40,todo,,,,,post 11 用；模型卡里的渲染图不可直接商用
+2026-11-15,14,P3 system,eve,Review,周复盘：跑 05-analyst-weekly,本周数据,,30,todo,,,,,
+2026-11-16,15,P4 validate,am,EN post,English short post,DeepSeek super-agent 原型与它的那条规则,,15,todo,,,,,draft: posts-11-13.md #12
+2026-11-16,15,P4 validate,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,DeepSeek super-agent 原型与它的那条规则,,15,todo,,,,,draft: posts-11-13.md #12（中文段）
+2026-11-16,15,P4 validate,block,Product,免费 PDF：50 Practical AI Workflows,免费 PDF,,180,todo,,,,,
+2026-11-17,16,P4 validate,am,EN post,English short post,763B 参数跑在笔记本上（Strata）,assets/card-763b.png,15,todo,,,,,draft: posts-11-13.md #13
+2026-11-17,16,P4 validate,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,763B 参数跑在笔记本上（Strata）,,15,todo,,,,,draft: posts-11-13.md #13（中文段）
+2026-11-17,16,P4 validate,pm2,Thread,英文深度 Thread（6–10 条）,763B 跑在笔记本上，门槛到底降在哪,,60,todo,,,,,draft: thread-03-local-763b.md
+2026-11-17,16,P4 validate,block,Product,落地页 / 资源页上线（收集邮箱）,落地页,,90,todo,,,,,
+2026-11-18,17,P4 validate,am,EN post,English short post,NES CPU 编译进模型权重（nesformer）,,15,todo,,,,,draft: posts-14-17.md #14
+2026-11-18,17,P4 validate,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,NES CPU 编译进模型权重（nesformer）,,15,todo,,,,,draft: posts-14-17.md #14（中文段）
+2026-11-18,17,P4 validate,pm2,Tool test,实际工具测试 + 截图/数据,待定（当日选题未定）,,45,todo,,,,,未定主题；需可复现的测试对象
+2026-11-18,17,P4 validate,pm3,CN thread,中文 Thread（重写，不是翻译）,763B 本地推理（中文版，6 条）,,40,todo,,,,,draft: thread-03-local-763b.md
+2026-11-18,17,P4 validate,block,Revenue,研究 5 个联盟计划，选 2 个申请,联盟计划,,60,todo,,,,,
+2026-11-19,18,P4 validate,am,EN post,English short post,一个分享链接接管 ChatGPT 账号,,15,todo,,,,,draft: posts-14-17.md #15
+2026-11-19,18,P4 validate,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,一个分享链接接管 ChatGPT 账号,,15,todo,,,,,draft: posts-14-17.md #15（中文段）
+2026-11-19,18,P4 validate,pm2,Visual,信息图 / 数据卡片,WebGPU 卡（post 18 用）,,40,todo,,,,,已完成：assets/card-webgpu.png，gutter 0px / 边距 120
+2026-11-20,19,P4 validate,am,EN post,English short post,155 个响应带出别人的 prompt（Cloudflare）,,15,todo,,,,,draft: posts-14-17.md #16
+2026-11-20,19,P4 validate,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,155 个响应带出别人的 prompt（Cloudflare）,,15,todo,,,,,draft: posts-14-17.md #16（中文段）
+2026-11-20,19,P4 validate,pm2,Thread,英文深度 Thread（6–10 条）,待定（当日选题未定）,,60,todo,,,,,未写
+2026-11-21,20,P4 validate,am,EN post,English short post,超音速客机，还是给 GPU 供电的燃气轮机,,15,todo,,,,,draft: posts-14-17.md #17
+2026-11-21,20,P4 validate,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,超音速客机，还是给 GPU 供电的燃气轮机,,15,todo,,,,,draft: posts-14-17.md #17（中文段）
+2026-11-21,20,P4 validate,pm2,Tool test,实际工具测试 + 截图/数据,待定（当日选题未定）,,45,todo,,,,,未定主题；需可复现的测试对象
+2026-11-22,21,P4 validate,am,EN post,English short post,greedy 解码在 WebGPU 上不确定（我实测）,assets/card-webgpu.png,15,todo,,,,,draft: posts-18-20.md #18
+2026-11-22,21,P4 validate,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,greedy 解码在 WebGPU 上不确定（我实测）,,15,todo,,,,,draft: posts-18-20.md #18（中文段）
+2026-11-22,21,P4 validate,pm2,Visual,信息图 / 数据卡片,待定（当日选题未定）,,40,todo,,,,,等当日 EN 帖定稿后再定
+2026-11-22,21,P4 validate,eve,Review,周复盘：跑 05-analyst-weekly,本周数据,,30,todo,,,,,
+2026-11-23,22,P5 convert,am,EN post,English short post,LFM3：一个骨干，六个 2B 模型,,15,todo,,,,,draft: posts-18-20.md #19
+2026-11-23,22,P5 convert,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,LFM3：一个骨干，六个 2B 模型,,15,todo,,,,,draft: posts-18-20.md #19（中文段）
+2026-11-23,22,P5 convert,block,Product,付费 Workflow Pack 制作（$9–19）,付费 pack,,180,todo,,,,,README 建议推到 day 35（第 2 个月）
+2026-11-24,23,P5 convert,am,EN post,English short post,83 万个被标记的助学金账户,,15,todo,,,,,draft: posts-18-20.md #20
+2026-11-24,23,P5 convert,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,83 万个被标记的助学金账户,,15,todo,,,,,draft: posts-18-20.md #20（中文段）
+2026-11-24,23,P5 convert,pm2,Thread,英文深度 Thread（6–10 条）,三起事故，一个模式：信任边界,,60,todo,,,,,draft: thread-04-trust-boundaries.md
+2026-11-24,23,P5 convert,block,Revenue,发布产品介绍帖 + 定价测试,产品发布,,60,todo,,,,,
+2026-11-25,24,P5 convert,am,EN post,English short post,待定（当日选题未定）,,15,todo,,,,,
+2026-11-25,24,P5 convert,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,待定（当日选题未定）,,15,todo,,,,,
+2026-11-25,24,P5 convert,pm2,Tool test,实际工具测试 + 截图/数据,待定（当日选题未定）,,45,todo,,,,,未定主题；需可复现的测试对象
+2026-11-25,24,P5 convert,pm3,CN thread,中文 Thread（重写，不是翻译）,信任边界（中文版，6 条）,,40,todo,,,,,draft: thread-04-trust-boundaries.md
+2026-11-26,25,P5 convert,am,EN post,English short post,待定（当日选题未定）,,15,todo,,,,,
+2026-11-26,25,P5 convert,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,待定（当日选题未定）,,15,todo,,,,,
+2026-11-26,25,P5 convert,pm2,Visual,信息图 / 数据卡片,待定（当日选题未定）,,40,todo,,,,,等当日 EN 帖定稿后再定
+2026-11-27,26,P5 convert,am,EN post,English short post,待定（当日选题未定）,,15,todo,,,,,
+2026-11-27,26,P5 convert,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,待定（当日选题未定）,,15,todo,,,,,
+2026-11-27,26,P5 convert,pm2,Thread,英文深度 Thread（6–10 条）,待定（当日选题未定）,,60,todo,,,,,未写
+2026-11-28,27,P5 convert,am,EN post,English short post,待定（当日选题未定）,,15,todo,,,,,
+2026-11-28,27,P5 convert,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,待定（当日选题未定）,,15,todo,,,,,
+2026-11-28,27,P5 convert,pm2,Tool test,实际工具测试 + 截图/数据,待定（当日选题未定）,,45,todo,,,,,未定主题；需可复现的测试对象
+2026-11-29,28,P5 convert,am,EN post,English short post,待定（当日选题未定）,,15,todo,,,,,
+2026-11-29,28,P5 convert,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,待定（当日选题未定）,,15,todo,,,,,
+2026-11-29,28,P5 convert,pm2,Visual,信息图 / 数据卡片,待定（当日选题未定）,,40,todo,,,,,等当日 EN 帖定稿后再定
+2026-11-29,28,P5 convert,eve,Review,周复盘：跑 05-analyst-weekly,本周数据,,30,todo,,,,,
+2026-11-30,29,P5 convert,am,EN post,English short post,待定（当日选题未定）,,15,todo,,,,,
+2026-11-30,29,P5 convert,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,待定（当日选题未定）,,15,todo,,,,,
+2026-11-30,29,P5 convert,block,Review,30 天数据总复盘，决定是否复制系统,总复盘,,90,todo,,,,,
+2026-12-01,30,P5 convert,am,EN post,English short post,待定（当日选题未定）,,15,todo,,,,,
+2026-12-01,30,P5 convert,pm,CN post,中文短帖 — 同一主题，换角度重写（不翻译）,待定（当日选题未定）,,15,todo,,,,,
+2026-12-01,30,P5 convert,pm2,Thread,英文深度 Thread（6–10 条）,待定（当日选题未定）,,60,todo,,,,,未写

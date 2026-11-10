@@ -1,0 +1,14 @@
+# --- 凭据：绝对不能进仓库 ---
+secrets/*.json
+!secrets/x-client.example.json
+
+# --- 生成物 ---
+digests/
+_scratch/
+logs/
+node_modules/
+
+# --- 系统杂物 ---
+Thumbs.db
+desktop.ini
+*.log
