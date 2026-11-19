@@ -5,7 +5,7 @@ description: Run Agent Ledger's X publishing and community engagement workflow: 
 
 # Agent Ledger X
 
-Use this skill only for the user's Agent Ledger account `@agentledger_` and the project in `C:\Users\刘\Desktop\X`. Answer in Chinese unless the user asks otherwise. A user request to start this skill means carry out the specific action they named; it does not authorize unrelated posts, follows, likes, or account changes.
+Use this skill only for the user's Agent Ledger account `@agentledger_` and the project in the current repository. Answer in Chinese unless the user asks otherwise. A user request to start this skill means carry out the specific action they named; it does not authorize unrelated posts, follows, likes, or account changes.
 
 ## Choose the requested mode
 

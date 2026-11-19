@@ -13,7 +13,7 @@ you, including the X reward programme. No region workarounds needed anywhere.
 ## Quick start
 
 ```powershell
-cd C:\Users\刘\Desktop\X
+cd <repo>
 
 # 1. today's topic radar
 node scripts\research.mjs --days 3 --top 15
@@ -92,7 +92,7 @@ X/
    └─ x-schedule.mjs          publish every row that is due today, write status back
 ```
 
-This folder — `C:\Users\刘\Desktop\X` — is the project. Work here from now on;
+This folder is the project. Work here from now on;
 everything the kit needs is inside it and no path points outside.
 
 ---

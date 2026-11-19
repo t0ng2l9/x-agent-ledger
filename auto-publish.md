@@ -73,7 +73,7 @@ Buffer / Typefully 这类排程工具的用户并不开这个标签，而它们�
 ### 1.2 授权一次
 
 ```powershell
-cd C:\Users\刘\Desktop\X
+cd <repo>
 node scripts\x-auth.mjs --client-id 你的-client-id
 # 等价于先把 client_id 写进 secrets\x-client.json，再跑 node scripts\x-auth.mjs
 ```

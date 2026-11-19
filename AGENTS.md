@@ -13,7 +13,7 @@
 
 ## 工作目录
 
-`C:\Users\刘\Desktop\X` —— 一切都在这里，不要往外写。
+`<repo>` —— 项目根目录，一切都在这里，不要往外写。
 
 ## 结构
 
@@ -50,7 +50,7 @@
 ## 命令
 
 ```powershell
-cd C:\Users\刘\Desktop\X
+cd <repo>
 .\run.ps1                                   # 跑雷达并打开结果
 node scripts\research.mjs --days 7 --top 25 # 直接跑
 node scripts\check-posts.mjs posts-01-10.md # 发帖前查字数

@@ -17,7 +17,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const ROOT = resolve(HERE, "..");                        // -> kit root (C:\Users\刘\Desktop\X)
+const ROOT = resolve(HERE, "..");                        // -> kit root
 const DIGEST_DIR = join(ROOT, "digests");
 const FEEDS_PATH = join(HERE, "feeds.json");
 
